@@ -1,225 +1,211 @@
-
-.default{
---main-background: hsl(217, 54%, 11%);
---card-background: hsl(216, 50%, 16%);
---white-color: hsl(0, 0%, 100%);
---line-color: hsl(215, 32%, 27%);
---text-color: hsl(178, 100%, 50%);
---text-color2: hsl(215, 51%, 70%);
+.default {
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --white-color: hsl(0, 0%, 100%);
+  --line-color: hsl(215, 32%, 27%);
+  --text-color: hsl(178, 100%, 50%);
+  --text-color2: hsl(215, 51%, 70%);
 }
 
-
-.theme{
-  --main-background: rgb(251,247,237);
---card-background: rgb(255,255,255);
---white-color: rgb(0,76,63);
---line-color: rgb(100, 104, 109);
---text-color: rgb(149,191,71);
---text-color2: rgb(107,113,119); 
+.theme {
+  --main-background: rgb(251, 247, 237);
+  --card-background: rgb(255, 255, 255);
+  --white-color: rgb(0, 76, 63);
+  --line-color: rgb(100, 104, 109);
+  --text-color: rgb(149, 191, 71);
+  --text-color2: rgb(107, 113, 119);
 }
-
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  html {
-    width: 100vw;
-    height: 100vh;
-  }
-  body {
-    width: 100%;
-    height: 100%;
-    background-color: var(--main-background);
-    padding-top: 1.5rem;
-    user-select: none;
-    overflow-x: hidden;  
-    padding: 0 5px;
-  }
-  
-  .container {
-    max-width: 24rem;
-    margin: auto;
-    background-color: var(--card-background);
-    border-radius: 18px;
-    margin-bottom: 4rem;
-    /* border: 2px solid red; */
-  }
-  .wrapper {
-    /* border: 2px solid red; */
-    margin: auto;
-  }
-  nav{
-    top: 0;
-    right: 0;
-    left: 0;
-    position: sticky;
-    background-color: var(--card-background);
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
-    z-index: 99;
-    padding-bottom: 1.3rem;
-    
-   
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 28px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  /* The slider */
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--main-background);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--card-background);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: var(--main-background);
-  }
-  
-  input:focus + .slider {
-    /* box-shadow: 0 0 1px #2196F3; */
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  header{
-      display: flex;
-      justify-content: space-between;
-      color: var(--white-color);
-      padding-top: 1.5rem;
-      align-items: center;
-      margin: 0.5rem 1rem;
-  }
-  h1{
-    font-family: 'Pacifico', cursive;
-  }
-  hr{
-      opacity: 0.1;
-  }
- 
-  .spaceCollection{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      margin: 0.8rem 0 0.5rem 0.5rem;
-      color: var(--white-color);
-      /* border: 2px solid red; */
-  }
-  .spaceCollectionItem{
-    /* border: 2px solid white; */
-      list-style: none;
-      width: 60px;
-      height: 70px;
-      /* display: flex; */
-      /* flex-direction: column; */
-  }
-  .spaceCollection img{
-    /* border: 2px solid yellow; */
-      width: 100%;
-      height: 100%;
-      border: 3px solid var(--line-color);
-      border-radius: 50%;
-  }
-  .status{
-    /* border: 2px solid; */
-      font-size: 12px;
-      margin-bottom: 1rem;
-  }
-  #nasaProfile{
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 1rem 0 0.7rem 0rem;
-  }
-  .nasaProfilePicture{
-      width: 40px;
-      height: 40px;
-      background-image: url(./images/NASA_logo.svg.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-  .nasaName{
-      color: var(--white-color);
-      font-size: 1.2rem;
-  }
-  article{
-    width: 93%;
-    margin: auto;
-  }
-  .nasaImage{
-      height: 370px;
-      border-radius: 10px;
-      background: url(./images/pexels-pixabay-41162.jpg) no-repeat center center/cover;
-  }
-  .nasaImage2{
-    height: 370px;
-    border-radius: 10px;
-    background: url(./images/pexels-pixabay-220201.jpg) no-repeat center center/cover;
+html {
+  width: 100vw;
+  height: 100vh;
 }
-.nasaImage3{
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-background);
+  padding-top: 1.5rem;
+  overflow-x: hidden;
+  padding: 0 5px;
+}
+
+.container {
+  max-width: 30rem;
+  margin: auto;
+  background-color: var(--card-background);
+  border-radius: 18px;
+}
+.wrapper {
+  margin: auto;
+  margin-top: 2rem;
+}
+nav {
+  top: 0;
+  right: 0;
+  left: 0;
+  position: sticky;
+  background-color: var(--card-background);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  z-index: 99;
+  padding-bottom: 1.3rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--main-background);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--card-background);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var( --white-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white-color);
+  padding-top: 1.5rem;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+}
+hr {
+  opacity: 0.1;
+}
+
+.spaceCollection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0.8rem 0 0.5rem 0.5rem;
+  color: var(--white-color);
+}
+.spaceCollectionItem {
+  list-style: none;
+  width: 60px;
+  height: 70px;
+}
+.spaceCollection img {
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--line-color);
+  border-radius: 50%;
+}
+.status {
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+#nasaProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0 0.7rem 0rem;
+}
+.nasaProfilePicture {
+  width: 40px;
+  height: 40px;
+  background-image: url(./images/NASA_logo.svg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nasaName {
+  color: var(--white-color);
+  font-size: 1.2rem;
+}
+article {
+  width: 90%;
+  margin: auto;
+}
+.nasaImage {
+  height: 400px;
+  border-radius: 10px;
+  background: url(./images/pexels-pixabay-41162.jpg) no-repeat center
+    center/cover;
+}
+.nasaImage2 {
   height: 370px;
   border-radius: 10px;
-  background: url(./images/pexels-pixabay-41953.jpg) no-repeat center center/cover;
+  background: url(./images/pexels-pixabay-220201.jpg) no-repeat center
+    center/cover;
 }
-.nasaImage4{
+.nasaImage3 {
   height: 370px;
   border-radius: 10px;
-  background: url(./images/pexels-pixabay-355938.jpg) no-repeat center center/cover;
+  background: url(./images/pexels-pixabay-41953.jpg) no-repeat center
+    center/cover;
+}
+.nasaImage4 {
+  height: 370px;
+  border-radius: 10px;
+  background: url(./images/pexels-pixabay-355938.jpg) no-repeat center
+    center/cover;
 }
 .heart {
   width: 100px;
   height: 100px;
   transform: translate(-30%, -20%);
-  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png)
+    no-repeat;
   background-position: 0 0;
   cursor: pointer;
   animation: fave-heart 1s steps(28);
-  /* border: 2px solid; */
   padding-top: 2rem;
 }
 
@@ -237,36 +223,40 @@
   }
 }
 
-  .imageTitle{
-    text-transform: capitalize;
-    color: var(--white-color);
-    margin-top: -2.5rem;
-    font-weight: 700;
-/* border: 2px solid; */
-  }
-  .imageTitle:hover{
-     color: var(--text-color);
-  }
-  .imageDescription{
-    color: var(--text-color2);
-    font-size: 17px;
-    line-height: 1.3rem;
-    margin-top: 0.5rem;
-  }
-  .date{
-    display: flex;
-    gap: 1rem;
-  }
-  #calender, .today{
-    color: var(--text-color);
-    margin: 0.5rem 0 1.4rem 0;
-    font-weight: 700;
-  }
-   .today:hover{
-    color: var(--white-color);
-  }
+.imageTitle {
+  text-transform: capitalize;
+  color: var(--white-color);
+  margin-top: -2rem;
+  font-weight: 700;
+}
+.imageTitle:hover {
+  color: var(--text-color);
+}
+.imageDescription {
+  color: var(--text-color2);
+  font-size: 17px;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+.date {
+  display: flex;
+  gap: 1rem;
+}
+#calender,
+.today {
+  color: var(--text-color);
+  margin: 1rem 0 1.4rem 0;
+  font-weight: 700;
+}
+.today:hover {
+  color: var(--white-color);
+}
 
-  
-  
-  
-  
+footer {
+  max-width: 24rem;
+  margin: auto;
+  text-align: center;
+  padding: 2rem;
+  font-size: 18px;
+}
