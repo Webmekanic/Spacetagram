@@ -9,6 +9,16 @@
 }
 
 
+.theme{
+  --main-background: rgb(251,247,237);
+--card-background: rgb(255,255,255);
+--white-color: rgb(0,76,63);
+--line-color: rgb(100, 104, 109);
+--text-color: rgb(149,191,71);
+--text-color2: rgb(107,113,119); 
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -218,7 +228,7 @@
   }
   .imageTitle{
     text-transform: capitalize;
-    color: white;
+    color: var(--white-color:);
     margin-top: 0.8rem;
     font-weight: 700;
 
