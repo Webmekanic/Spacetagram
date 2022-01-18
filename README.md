@@ -1,2 +1,2 @@
 # Spacetagram
-An app to help share photos from NASA’s image APIs.
+A Webapp that shares photos from NASA image API.
