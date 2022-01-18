@@ -123,6 +123,7 @@ h1 {
   font-size: 25px;
   opacity: 0.8;
 }
+
 hr {
   opacity: 0.1;
 }
@@ -130,7 +131,19 @@ hr {
   font-size: 18px;
   color: var(--text-color2);
   font-weight: bold;
+  margin-bottom: 0.3rem;
 }
+.viewRepo{
+  color: var(--white-color);
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 700;
+}
+.viewRepo:hover{
+  color: var(--text-color);
+  
+}
+
 /* UI LOADER/SPINNER */
 .lds-spinner {
   color: official;

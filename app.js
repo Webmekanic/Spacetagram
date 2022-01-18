@@ -2,17 +2,26 @@ const toggleUI = document.getElementById("toggle");
 const heartUI = document.getElementsByClassName("heart");
 const today = document.getElementsByClassName("brand");
 const body = document.body;
-
-console.log(heartUI);
-
 const nasa = new NasaImages();
 const ui = new UI();
-
 const main = document.querySelector(".main-content");
+ document.addEventListener("DOMContentLoaded", getTheme);
+
+ function getTheme() {
+  let blend;
+  if (localStorage.getItem("blend") === null) {
+    blend = [];
+
+
+  } else {
+    blend = JSON.parse(localStorage.getItem("blend"))
+  }
+  document.body.className = blend;
+   
+ }
 
 function load() {
   let loadTime;
-
   loadTime = true;
   if (loadTime) {
     main.innerHTML = `<div class="lds-spinner">
@@ -35,17 +44,11 @@ function load() {
     loadTime = false;
     let key;
     if (!loadTime) {
-      console.log(data);
       ui.showImages(data);
-
+      console.log(data);
       data.images.forEach((image) => {
         key = image.title;
       });
-
-      const likeStr = localStorage.getItem(`${key}`);
-
-      console.log(key);
-
       const likeBtn = document.querySelectorAll(".heart");
       likeBtn.forEach((btn) => {
         btn.addEventListener("click", (e) => {
@@ -58,7 +61,6 @@ function load() {
     }
   });
 }
-
 window.onload = load();
 
 toggleUI.addEventListener("input", (e) => {
@@ -69,7 +71,23 @@ toggleUI.addEventListener("input", (e) => {
   } else {
     body.classList.remove("theme");
   }
+ setLocalStorage( body.className);
+  
 });
+
+function setLocalStorage (theme) {
+  let blend;
+  if (localStorage.getItem("blend") === null) {
+    blend = [];
+
+  } else {
+    blend = JSON.parse(localStorage.getItem("blend"))
+  }
+  localStorage.setItem("blend", JSON.stringify(theme));
+  // localStorage.setItem("blend", JSON.stringnify(theme));
+
+}
+
 
 let heartArr = Array.from(heartUI);
 heartArr.forEach(function (heartUI) {

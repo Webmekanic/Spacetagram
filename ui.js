@@ -17,7 +17,7 @@ class UI {
           <p  class="imageDescription">${image.explanation}</p>
           <div class="date">
             <i id="calender" class="far fa-calendar-alt"></i>
-            <p class="today">12-12-2021</p>
+            <p class="today">${image.date}</p>
           </div>
         </article>
         <hr />
