@@ -127,6 +127,9 @@ h1 {
 hr {
   opacity: 0.1;
 }
+hr:last-child{
+  opacity: 0;
+}
 #BrandParagraph {
   font-size: 18px;
   color: var(--text-color2);
@@ -143,6 +146,7 @@ hr {
   color: var(--text-color);
   
 }
+
 
 /* UI LOADER/SPINNER */
 .lds-spinner {
