@@ -7,7 +7,7 @@
   --text-color2: hsl(215, 51%, 70%);
 }
 
-.theme {
+.theme{
   --main-background: rgb(255, 255, 255);
   --card-background: rgb(251, 247, 237);
   --white-color: rgb(0, 76, 63);
@@ -139,8 +139,8 @@ hr:last-child{
 .viewRepo{
   color: var(--white-color);
   opacity: 0.8;
-  font-size: 18px;
-  font-weight: 700;
+  /* font-size: 18px; */
+  /* font-weight: 700; */
 }
 .viewRepo:hover{
   color: var(--text-color);

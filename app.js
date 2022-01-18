@@ -5,20 +5,8 @@ const body = document.body;
 const nasa = new NasaImages();
 const ui = new UI();
 const main = document.querySelector(".main-content");
- document.addEventListener("DOMContentLoaded", getTheme);
 
- function getTheme() {
-  let blend;
-  if (localStorage.getItem("blend") === null) {
-    blend = [];
-
-
-  } else {
-    blend = JSON.parse(localStorage.getItem("blend"))
-  }
-  document.body.className = blend;
-   
- }
+ 
 
 function load() {
   let loadTime;
@@ -71,22 +59,9 @@ toggleUI.addEventListener("input", (e) => {
   } else {
     body.classList.remove("theme");
   }
- setLocalStorage( body.className);
   
 });
 
-function setLocalStorage (theme) {
-  let blend;
-  if (localStorage.getItem("blend") === null) {
-    blend = [];
-
-  } else {
-    blend = JSON.parse(localStorage.getItem("blend"))
-  }
-  localStorage.setItem("blend", JSON.stringify(theme));
-  // localStorage.setItem("blend", JSON.stringnify(theme));
-
-}
 
 
 let heartArr = Array.from(heartUI);
